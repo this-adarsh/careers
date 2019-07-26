@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Study_M23::careers" title="This-Adarsh" module="Study_M23" sortOrder="51" resource="Study_M23::careers" />
+        <add id="Study_M23::careers_listing" title="Manage Career Listing" module="Study_M23" sortOrder="10" action="careers/careers" parent="Study_M23::careers" resource="Study_M23::careers"/>
+        <add id="Study_M23::careers_response" title="Career Response From Users" module="Study_M23" sortOrder="10" action="careersresponce/careersresponce" parent="Study_M23::careers" resource="Study_M23::careers"/>
+        <add id="Study_M23::hello_configuration" title="Configuration" module="Study_M23" sortOrder="99" parent="Study_M23::careers" action="adminhtml/system_config/edit/section/careers/" resource="Study_M23::careers"/>
+    </menu>
+</config>

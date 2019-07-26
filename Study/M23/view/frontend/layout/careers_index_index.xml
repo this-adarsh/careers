@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      layout="1column" 
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Study_M23::css/style.css" />
+        <script src="Study_M23::js/script.js" />
+        <css src="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" src_type="url"/>
+        <css src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" src_type="url"/>
+    </head> 
+  <body>
+    <referenceContainer name="content">
+      <block class="Study\M23\Block\Careers"
+            name="HelloWorld" 
+            template="Study_M23::Careers.phtml">
+      </block>
+    </referenceContainer>
+  </body>
+</page>

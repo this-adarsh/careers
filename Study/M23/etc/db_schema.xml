@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="careers" resource="default" engine="innodb" comment="This-Adarsh careers">
+        <column xsi:type="smallint" name="id" unsigned="false" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="varchar" name="position" nullable="false" length="300" comment="Name"/>
+        <column xsi:type="varchar" name="location" nullable="false" length="50" comment="location"/>
+        <column xsi:type="varchar" name="exp" nullable="false" length="255" comment="experiance"/>
+        <column xsi:type="text" name="role" nullable="false" comment="role"/>
+        <column xsi:type="smallint" name="active" nullable="false" comment="is active"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+    <table name="careersresponce" resource="default" engine="innodb" comment="RH Helloworld">
+        <column xsi:type="smallint" name="id" unsigned="false" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="300" comment="Name of applicant"/>
+        <column xsi:type="varchar" name="email" nullable="false" length="50" comment="email id"/>
+        <column xsi:type="varchar" name="contect" nullable="false" length="255" comment="contect number"/>
+        <column xsi:type="varchar" name="resume" nullable="false" comment="resume"/>
+        <column xsi:type="varchar" name="website" nullable="false" comment="website"/>
+        <column xsi:type="varchar" name="jobid" nullable="false" comment="jobid"/>
+        <column xsi:type="varchar" name="position" nullable="false" comment="position"/>
+        <column xsi:type="varchar" name="linkdin" nullable="false" length="255" comment="linkdin"/>
+        <column xsi:type="text" name="message" nullable="false" comment="message"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>    
+</schema>

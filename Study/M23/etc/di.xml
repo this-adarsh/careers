@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!-- 
+  @author Created by Adarsh Shukla.
+  Date: 12/3/19
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+<!-- grid and form start careeer-->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="careers_listing_data_source" xsi:type="string">Study\M23\Model\ResourceModel\Careers\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>    
+    <type name="Study\M23\Model\ResourceModel\Careers\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">careers</argument>
+            <argument name="equeriesPrefix" xsi:type="string">careers_grid_collection</argument>
+            <argument name="equeriesObject" xsi:type="string">careers_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Study\M23\Model\ResourceModel\Careers</argument>
+        </arguments>
+    </type>    
+    <virtualType name="CareersGridFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>    
+    <virtualType name="CareersGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Study\M23\Model\ResourceModel\Careers\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">CareersGridFilterPool</argument>
+        </arguments>
+    </virtualType>
+<!-- for grid and form end -->
+
+<!-- responce -->
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="careersresponce_listing_data_source" xsi:type="string">Study\M23\Model\ResourceModel\CareersResponce\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>    
+    <type name="Study\M23\Model\ResourceModel\CareersResponce\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">careersresponce</argument>
+            <argument name="equeriesPrefix" xsi:type="string">careersresponce_grid_collection</argument>
+            <argument name="equeriesObject" xsi:type="string">careersresponce_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Study\M23\Model\ResourceModel\CareersResponce</argument>
+        </arguments>
+    </type>    
+    <virtualType name="CareersResponceGridFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>    
+    <virtualType name="CareersResponceGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Study\M23\Model\ResourceModel\CareersResponce\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">CareersResponceGridFilterPool</argument>
+        </arguments>
+    </virtualType>
+
+</config>

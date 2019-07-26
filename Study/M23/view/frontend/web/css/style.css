@@ -1,0 +1,53 @@
+.text-center{
+    text-align: center;
+}
+.careers-index-index .page-main {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 100%;
+}
+.careers-index-index .page-main>.columns {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 100%;
+}
+.columns {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pb-6{
+    padding-bottom: 6px;
+}
+.pl-6{
+    padding-left: 6px;
+}
+.pr-6{
+    padding-right: 6px;
+}
+.pt-6{
+    padding-top:  6px;
+}
+
+/*margin class*/
+.mb-6{
+    margin-bottom: 6px;
+}
+.ml-6{
+    margin-left: 6px;
+}
+.mr-6{
+    margin-right: 6px;
+}
+.mt-6{
+    margin-top:  6px;
+}
+
+.center{
+    text-align: center;
+}

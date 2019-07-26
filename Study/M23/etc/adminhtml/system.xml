@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="this_adarsh" translate="label" sortOrder="10">
+            <label>This-Adarsh</label>
+        </tab>
+        <section id="careers" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Careers Configuration</label>
+            <tab>this_adarsh</tab>
+            <resource>Study_M23::careers_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>This make shure module is enabled or desabled</comment>
+                </field>
+
+                <field id="title" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Header Line</label>
+                    <comment>This text will display on the frontend at top of page and title.</comment>
+                </field>  
+            </group>
+        </section>
+    </system>
+</config>
