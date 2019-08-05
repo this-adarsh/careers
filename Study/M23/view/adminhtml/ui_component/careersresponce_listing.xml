@@ -175,7 +175,8 @@
                 </item>
             </argument>
         </column>
-        <column name="linkdinurl" class="Study\M23\Ui\Component\Listing\Column\Linkdin">
+        <column name="linkdinurl">
+<!--            class="Study\M23\Ui\Component\Listing\Column\Linkdin" -->
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="bodyTmpl" xsi:type="string">ui/grid/cells/html</item>                    
