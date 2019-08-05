@@ -56,7 +56,7 @@ class DownloadResume extends Action
         $applicantName = $model->getData('name')."'s_resume.".''.$extension;
         return $this->_downloader->create(
             $applicantName,
-            @file_get_contents($fileName)
+            @file_get_contents(file_get_contents(str_replace(" ", "_", $fileName)))
         );
     }
 }
